@@ -10,7 +10,6 @@ CMCON equ 0x1F
 contador  equ 0x20
 contador2 equ 0x21
 
-
 		org 0x00; inicio del proyecto
 		
 		movlw 0x07
@@ -24,13 +23,13 @@ contador2 equ 0x21
 		movlw 0xFF
 		movwf PORTB
 
-ini:	call retardo
+ini:		call retardo
 		call retardo
 		call retardo 
 
 		clrf PORTB
 
-bucleA:	bsf PORTB,0
+bucleA:		bsf PORTB,0
 
 		call retardo
 	
@@ -91,28 +90,27 @@ bucleA:	bsf PORTB,0
 
 
 retardo:	call retardoB	
-			call retardoB
-			call retardoB
-			call retardoB
-			call retardoB		
-			call retardoB
-			return
+		call retardoB
+		call retardoB
+		call retardoB
+		call retardoB		
+		call retardoB
+		return
 
 
 retardoB:	movlw 0xFF
 retAnidado:	movwf contador2
 bucle2:		decfsz contador2,1
-			goto retardar
-			goto salir
+		goto retardar
+		goto salir
 retardar:	call retardoBucle
-			goto bucle2
+		goto bucle2
 salir:		return		
 
 retardoBucle:	movlw d'200'
-				movwf contador
-bucle:			decfsz contador,1
-				goto bucle
-				return
-
+		movwf contador
+bucle:		decfsz contador,1
+		goto bucle
+		return
 
 		end
