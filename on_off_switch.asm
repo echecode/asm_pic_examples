@@ -11,10 +11,10 @@ TRISB 	equ 0x86
 
 		bcf PORTB,0		;comienza led apagado
 		
-bucle:	btfss PORTB,1	;espera switch on
+bucle:		btfss PORTB,1	;espera switch on
 		goto bucle
 		bsf PORTB,0		;encendido
-bucle2:	btfsc PORTB,1 	;espera switch off
+bucle2:		btfsc PORTB,1 	;espera switch off
 		goto bucle2
 		bcf PORTB,0		;apagar
 		goto bucle
