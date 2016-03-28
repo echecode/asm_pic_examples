@@ -2,7 +2,7 @@
 reg_mem equ 0x21
 
 			org 0x00; 
-inicio:		bsf reg_mem,0			
+inicio:			bsf reg_mem,0			
 			bcf reg_mem,0
 			bsf reg_mem,1
 			bcf reg_mem,1
