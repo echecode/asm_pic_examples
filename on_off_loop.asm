@@ -5,4 +5,4 @@ inicio:			nop
 			nop				
 			bcf 0x20,4		; pone en 0 bit 4 del registro 0x20
 			goto inicio		
-			end				; final 
+			end			; final 
