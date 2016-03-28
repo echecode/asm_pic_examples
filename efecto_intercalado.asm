@@ -7,15 +7,15 @@ TRISA equ 0x85
 TRISB equ 0x86
 CMCON equ 0x1F
 
-		org 0x00; inicio del proyecto
+		org 0x00	; inicio del proyecto
 		
 		movlw 0x07
 		movwf CMCON
 
-		bsf STATUS,5; banco 1
-		clrf TRISB;  Todo el puerto B como salida
-		bsf TRISA,1; RA1 como entrada
-		bcf STATUS,5; banco 0
+		bsf STATUS,5	; banco 1
+		clrf TRISB	;  Todo el puerto B como salida
+		bsf TRISA,1	; RA1 como entrada
+		bcf STATUS,5	; banco 0
 
 		movlw 0xFF
 		movwf PORTB
