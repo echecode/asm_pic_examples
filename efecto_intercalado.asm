@@ -20,9 +20,9 @@ CMCON equ 0x1F
 		movlw 0xFF
 		movwf PORTB
 
-bucle:	btfss PORTA,1
+bucle:		btfss PORTA,1
 		goto bucle
-bucle2:	btfsc PORTA,1
+bucle2:		btfsc PORTA,1
 		goto bucle2
 		bsf PORTB,0
 		bcf PORTB,1
@@ -32,9 +32,9 @@ bucle2:	btfsc PORTA,1
 		bcf PORTB,5
 		bsf PORTB,6
 		bcf PORTB,7
-bucle3:	btfss PORTA,1
+bucle3:		btfss PORTA,1
 		goto bucle3
-bucle4:	btfsc PORTA,1
+bucle4:		btfsc PORTA,1
 		goto bucle4
 		bcf PORTB,0
 		bsf PORTB,1
