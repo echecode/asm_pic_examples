@@ -88,7 +88,6 @@ bucleA:		bsf PORTB,0
 		bcf PORTB,1
 		goto bucleA
 
-
 retardo:	call retardoB	
 		call retardoB
 		call retardoB
@@ -96,7 +95,6 @@ retardo:	call retardoB
 		call retardoB		
 		call retardoB
 		return
-
 
 retardoB:	movlw 0xFF
 retAnidado:	movwf contador2
