@@ -6,8 +6,8 @@
  
     ;Asignación de nombres a direcciones de memoria 
 STATUS	    equ 0x03        ; Registro STATUS, para seleccionar bancos (entre otras cosas)
-TRISB	      equ 0x86        ; Registro TRISB, para configurar entradas o salidas del PUERTOB
-PORTB	      equ 0x06        ; Registro PORTB, bits que corresponden a pines/hardware del micro
+TRISB	    equ 0x86        ; Registro TRISB, para configurar entradas o salidas del PUERTOB
+PORTB	    equ 0x06        ; Registro PORTB, bits que corresponden a pines/hardware del micro
 OPTREG      equ 0x01        ; Registro OPT, para configurar el TIMER0 (entre otras cosas)
 INTCON	    equ 0x0B        ; Registro INTCON, bits de condición de interrupción(entre otras cosas)
 TMR0        equ 0x01        ; Registro del TIMER0
